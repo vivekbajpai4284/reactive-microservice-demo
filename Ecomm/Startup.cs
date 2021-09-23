@@ -31,7 +31,7 @@ namespace Ecomm
             services.AddSingleton<IInventoryUpdator>(new InventoryUpdator(connectionString));
 
             services.AddHttpClient("order", config =>
-                config.BaseAddress = new System.Uri("https://localhost:5001/"));
+                config.BaseAddress = new System.Uri("https://localhost:5002/"));
 
             services.AddSingleton<IConnectionProvider>(new ConnectionProvider("amqp://guest:guest@localhost:5672"));
             services.AddSingleton<IPublisher>(x => new Publisher(x.GetService<IConnectionProvider>(),

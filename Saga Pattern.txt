@@ -1,0 +1,3 @@
+You should run the Ecomm and Order service
+1- In both services have startup file which we have configured Rabbit MQ listener (Publish and Subscriber)
+2- When Order has been created Ecomm services listen it mean Subscribing the same order and updating Ecom data if any thing wrong for updation it publish the the  false data then Order Srevice listing the Invertory service and rollabck the data Imedeatlly.
